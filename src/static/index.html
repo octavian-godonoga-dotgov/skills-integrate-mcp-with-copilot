@@ -13,31 +13,36 @@
     </header>
 
     <main>
+      <section id="add-activity-container">
+        <h3>Add New Activity</h3>
+        <form id="add-activity-form">
+          <div class="form-group">
+            <label for="activity-name">Activity Name:</label>
+            <input type="text" id="activity-name" required placeholder="e.g. Art Club" />
+          </div>
+          <div class="form-group">
+            <label for="activity-description">Description:</label>
+            <input type="text" id="activity-description" required placeholder="Short description" />
+          </div>
+          <div class="form-group">
+            <label for="activity-schedule">Schedule:</label>
+            <input type="text" id="activity-schedule" required placeholder="e.g. Fridays, 3:30 PM" />
+          </div>
+          <div class="form-group">
+            <label for="activity-max">Max Participants:</label>
+            <input type="number" id="activity-max" required min="1" value="10" />
+          </div>
+          <button type="submit">Add Activity</button>
+        </form>
+        <div id="add-activity-message" class="hidden"></div>
+      </section>
+      <div id="message" class="hidden"></div>
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
-      </section>
-
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
       </section>
     </main>
 
