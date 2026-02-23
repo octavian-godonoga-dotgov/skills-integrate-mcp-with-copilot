@@ -28,17 +28,73 @@ header h1 {
   margin-bottom: 10px;
 }
 
+
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
   }
+}
+#add-activity-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+#add-activity-container h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #1a237e;
+}
+
+#add-activity-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+/* Register section styles */
+.register-section {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.register-email {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.register-btn {
+  background: #1a237e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.register-btn:hover {
+  background: #3949ab;
 }
 
 section {
@@ -48,6 +104,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  margin: 0 auto 0 auto;
 }
 
 section h3 {
@@ -164,10 +221,13 @@ button:hover {
   background-color: #3949ab;
 }
 
-.message {
-  margin-top: 20px;
+ #message {
+  margin: 20px auto 0 auto;
   padding: 10px;
   border-radius: 4px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .success {
